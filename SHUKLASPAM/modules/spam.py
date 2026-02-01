@@ -35,7 +35,7 @@ async def gifspam(e, smex):
 async def spam(event: events):
     if event.sender_id in SUDO_USERS:
         altron = event.text.split(" ", 2)
-        mk = await event.get_reply_message)
+        mk = await event.get_reply_message()
 
         try:
             if len(altron) == 3:
