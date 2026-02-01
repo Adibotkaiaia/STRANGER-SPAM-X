@@ -22,10 +22,10 @@ from datetime import datetime
 async def ping(e):
     if e.sender_id in SUDO_USERS:
         start = datetime.now()
-        altron = await e.reply(f"» ™°‌𝗦 𝗧 𝗥 𝗔 𝗡 𝗚 𝗘 𝗥")
+        altron = await e.reply(f"» ™°‌𝗩𝗜𝗣 ✘ 𝗙𝗨𝗖𝗞𝗘𝗥")
         end = datetime.now()
         mp = (end - start).microseconds / 1000
-        await altron.edit(f"💫🥀 🫧 🇸𝗧 𝗥 𝗔 𝗡 𝗚 𝗘 𝗥\n» {mp} 𝙼𝚂")
+        await altron.edit(f"💫🥀 🫧 🇸𝗩𝗜𝗣 ✘ 𝗙𝗨𝗖𝗞𝗘𝗥\n» {mp} 𝙼𝚂")
 
 
 @X1.on(events.NewMessage(incoming=True, pattern=r"\%sreboot(?: |$)(.*)" % hl))
@@ -40,7 +40,7 @@ async def ping(e):
 @X10.on(events.NewMessage(incoming=True, pattern=r"\%sreboot(?: |$)(.*)" % hl))
 async def restart(e):
     if e.sender_id in OWNER_ID:
-        await e.reply(f"🥀ʀᴇsᴛᴀʀᴛɪɴɢ sᴛʀᴀɴɢᴇʀ ʙᴏᴛs🥀...")
+        await e.reply(f"🥀ʀᴇsᴛᴀʀᴛɪɴɢ 𝗩𝗜𝗣 ✘ 𝗙𝗨𝗖𝗞𝗘𝗥 ʙᴏᴛs🥀...")
         try:
             await X1.disconnect()
         except Exception:
@@ -100,7 +100,7 @@ async def addsudo(event):
         Heroku = heroku3.from_key(HEROKU_API_KEY)
         sudousers = getenv("SUDO_USERS", default=None)
 
-        ok = await event.reply(f"» ᴀᴅᴅɪɴɢ ᴜsᴇʀ ᴀs sᴛʀᴀɴɢᴇʀ 💘sᴜᴅᴏ💘...🚀🚀")
+        ok = await event.reply(f"» ᴀᴅᴅɪɴɢ ᴜsᴇʀ ᴀs 𝗩𝗜𝗣 ✘ 𝗙𝗨𝗖𝗞𝗘𝗥 💘sᴜᴅᴏ💘...🚀🚀")
         target = ""
         if HEROKU_APP_NAME is not None:
             app = Heroku.app(HEROKU_APP_NAME)
@@ -118,13 +118,13 @@ async def addsudo(event):
             return
 
         if str(target) in sudousers:
-            await ok.edit("» 🌸ᴛʜɪs ᴜsᴇʀ ɪs ᴀʟʀᴇᴀᴅʏ ᴀ sᴜᴅᴏ ᴜsᴇʀ ᴏғ sᴛʀᴀɴɢᴇʀ ʙᴏᴛs🌸 !!")
+            await ok.edit("» 🌸ᴛʜɪs ᴜsᴇʀ ɪs ᴀʟʀᴇᴀᴅʏ ᴀ sᴜᴅᴏ ᴜsᴇʀ ᴏғ 𝗩𝗜𝗣 ✘ 𝗙𝗨𝗖𝗞𝗘𝗥 ʙᴏᴛs🌸 !!")
         else:
             if len(sudousers) > 0:
                 newsudo = f"{sudousers} {target}"
             else:
                 newsudo = f"{target}"
-            await ok.edit(f"» ɴᴇᴡ sᴜᴅᴏ ᴜsᴇʀ: {target}\n» 💖ʀᴇsᴛᴀʀᴛɪɴɢ sᴛʀᴀɴɢᴇʀ ʙᴏᴛs💖...`")
+            await ok.edit(f"» ɴᴇᴡ sᴜᴅᴏ ᴜsᴇʀ: {target}\n» 💖ʀᴇsᴛᴀʀᴛɪɴɢ 𝗩𝗜𝗣 ✘ 𝗙𝗨𝗖𝗞𝗘𝗥 ʙᴏᴛs💖...`")
             heroku_var["SUDO_USERS"] = newsudo    
 
     elif event.sender_id in SUDO_USERS:
@@ -146,7 +146,7 @@ async def rmsudo(event):
         Heroku = heroku3.from_key(HEROKU_API_KEY)
         sudousers = getenv("SUDO_USERS", default=None)
 
-        ok = await event.reply(f"» ʀᴇᴍᴏᴠɪɴɢ sᴜᴅᴏ ᴜsᴇʀ ɪɴ sᴛʀᴀɴɢᴇʀ 💘sᴜᴅᴏ ʟɪsᴛs💘...🚀🚀")
+        ok = await event.reply(f"» ʀᴇᴍᴏᴠɪɴɢ sᴜᴅᴏ ᴜsᴇʀ ɪɴ 𝗩𝗜𝗣 ✘ 𝗙𝗨𝗖𝗞𝗘𝗥 💘sᴜᴅᴏ ʟɪsᴛs💘...🚀🚀")
         target = ""
         if HEROKU_APP_NAME is not None:
             app = Heroku.app(HEROKU_APP_NAME)
@@ -165,7 +165,7 @@ async def rmsudo(event):
 
         if str(target) in sudousers:
             newsudo = sudousers.replace(str(target), "").strip()
-            await ok.edit(f"» sᴛʀᴀɴɢᴇʀ sᴜᴅᴏ ᴜsᴇʀ ʀᴇᴍᴏᴠᴇᴅ\n\n🛠️ sᴜᴅᴏ ᴜsᴇʀs: {newsudo} 🛠️")
+            await ok.edit(f"» 𝗩𝗜𝗣 ✘ 𝗙𝗨𝗖𝗞𝗘𝗥 sᴜᴅᴏ ᴜsᴇʀ ʀᴇᴍᴏᴠᴇᴅ\n\n🛠️ sᴜᴅᴏ ᴜsᴇʀs: {newsudo} 🛠️")
             heroku_var["SUDO_USERS"] = newsudo
         else:
             await ok.edit("» 🌸ᴛʜɪs ᴜsᴇʀ ɪs ɴᴏᴛ ᴀ sᴜᴅᴏ ᴜsᴇʀ🌸 !!")
