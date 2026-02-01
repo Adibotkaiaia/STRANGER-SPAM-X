@@ -28,7 +28,7 @@ BOT_TOKEN10 = getenv("BOT_TOKEN10", default=None)
 SUDO_USERS = list(map(lambda x: int(x), getenv("SUDO_USERS", default="6919199044").split()))
 for x in SHASHANK:
     SUDO_USERS.append(x)
-OWNER_ID = int(getenv("OWNER_ID", default="8289669166"))
+OWNER_ID = int(getenv("OWNER_ID", default="8400280060"))
 SUDO_USERS.append(OWNER_ID)
 
 
