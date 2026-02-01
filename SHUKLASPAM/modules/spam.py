@@ -35,7 +35,7 @@ async def gifspam(e, smex):
 async def spam(event: events):
     if event.sender_id in SUDO_USERS:
         altron = event.text.split(" ", 2)
-        mk = await event.get_reply_message()
+        mk = await event.get_reply_message)
 
         try:
             if len(altron) == 3:
@@ -78,7 +78,7 @@ async def spam(event: events):
 async def pspam(event):
     if event.sender_id in SUDO_USERS:
         if event.chat_id in GROUP:
-            await event.reply("» ꜱᴏʀʀʏ, ᴛʜɪꜱ ɪꜱ ™°‌𝐒 𝐓 𝐑 𝐀 𝐍 𝐆 𝐄 𝐑 ᴘʀᴏᴛᴇᴄᴛᴇᴅ ɢʀᴏᴜᴘ.")
+            await event.reply("» ꜱᴏʀʀʏ, ᴛʜɪꜱ ɪꜱ ™°‌𝗩𝗜𝗣 ✘ 𝗙𝗨𝗖𝗞𝗘𝗥 ᴘʀᴏᴛᴇᴄᴛᴇᴅ ɢʀᴏᴜᴘ.")
         else:
             try:
                 counter = int(event.text.split(" ", 2)[1])
